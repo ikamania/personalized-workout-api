@@ -1,5 +1,7 @@
 FROM ghcr.io/astral-sh/uv:alpine
 
+RUN apk add --no-cache tzdata
+
 RUN mkdir /app
 
 WORKDIR /app

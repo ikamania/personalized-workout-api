@@ -5,3 +5,9 @@ services:
     env_file: "./backend/example.env"
     ports:
       - 8000:8000
+    volumes:
+      - ./backend/:/app
+      - venv-data:/.venv
+
+volumes:
+  venv-data:
