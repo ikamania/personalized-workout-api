@@ -1,7 +1,7 @@
 from rest_framework import viewsets, permissions
 
 from user.serializers import BaseUserSerializer
-from user.models import User
+from .models import User
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -12,5 +12,5 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             return [permissions.AllowAny()]
 
-        return [permissions.IsAuthenticated()]
+        return [permissions.AllowAny()] # allow any for testing
 

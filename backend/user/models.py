@@ -2,25 +2,21 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password):
+    def create(self, email, password, **kwargs):
         user = self.model(
-            email=self.normalize_email(email)
+            email=self.normalize_email(email),
+            **kwargs,
         )
         user.set_password(password)
         user.save(using=self.db)
 
         return user
 
-    def create_superuser(self, email, password):
-        user = self.create_user(
-            email,
-            password
-        )
-        user.is_staff = True
-        user.is_admin = True
-        user.save(using=self._db)
+    def create_superuser(self, email, password, **kwargs):
+        kwargs.setdefault("is_staff", True)
+        kwargs.setdefault("is_admin", True)
 
-        return user
+        return self.create(email, password, **kwargs)
 
 
 class User(PermissionsMixin, AbstractBaseUser):
@@ -34,5 +30,4 @@ class User(PermissionsMixin, AbstractBaseUser):
     REQUIRED_FIELDS = []
 
     objects = UserManager()
-
 

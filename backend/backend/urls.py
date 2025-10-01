@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import include, path
 
 from rest_framework import routers, permissions
-from user import views
 
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+from user import views
+
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -37,8 +40,13 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
     path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+
+    path('tokens/obtain/', TokenObtainPairView.as_view(), name='token-obtain'),
+    path('tokens/refresh/', TokenRefreshView.as_view(), name='token-refresh'),
+
+    path('api-auth/', include('rest_framework.urls')),
+
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
