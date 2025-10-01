@@ -22,7 +22,8 @@ from rest_framework import routers, permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from user import views
+from user import views as user_views
+from workout import views as workout_views
 
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
@@ -37,7 +38,8 @@ schema_view = get_schema_view(
 )
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
+router.register(r'users', user_views.UserViewSet)
+router.register(r'workouts', workout_views.WorkoutViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
