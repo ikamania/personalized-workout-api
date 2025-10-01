@@ -17,8 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from rest_framework import routers
+from rest_framework import routers, permissions
 from user import views
+
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="workout api",
+        default_version='v1',
+        descripiton="api for personalized workout app",
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -26,5 +39,6 @@ router.register(r'users', views.UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
