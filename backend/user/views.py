@@ -12,5 +12,5 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             return [permissions.AllowAny()]
 
-        return [permissions.AllowAny()] # allow any for testing
+        return [permissions.IsAuthenticated()]
 

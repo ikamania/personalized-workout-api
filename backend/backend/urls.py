@@ -30,7 +30,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="workout api",
         default_version='v1',
-        descripiton="api for personalized workout app",
+        description="api for personalized workout app",
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
