@@ -73,7 +73,17 @@ docker-compose exec backend uv run python manage.py migrate
 
 ---
 
-## 5. Create a superuser (admin)
+## 5. Load initial exercises
+
+```bash
+docker-compose exec backend uv run python manage.py load_workouts
+```
+
+* Loads exercises from `backend/workout/data/exercises.json`
+
+---
+
+## 6. Create a superuser (admin)
 
 ```bash
 docker-compose exec backend uv run python manage.py createsuperuser
@@ -84,9 +94,7 @@ docker-compose exec backend uv run python manage.py createsuperuser
 
 ---
 
----
-
-## 6. API Endpoints
+## 7. API Endpoints
 
 | Endpoint          | Method | Description                   |
 | ----------------- | ------ | ----------------------------- |
@@ -103,7 +111,7 @@ docker-compose exec backend uv run python manage.py createsuperuser
 
 ---
 
-## 7. Stop the containers
+## 8. Stop the containers
 
 ```bash
 docker-compose down
@@ -111,7 +119,7 @@ docker-compose down
 
 ---
 
-## 8. Tips
+## 9. Tips
 
 * To reset the database:
 
@@ -120,10 +128,4 @@ docker-compose exec backend rm db.sqlite3
 
 docker-compose exec backend uv run python manage.py makemigrations
 docker-compose exec backend uv run python manage.py migrate
-```
-
-* To load initial exercises
-
-```bash
-docker-compose exec backend uv run python manage.py load_workouts
 ```
