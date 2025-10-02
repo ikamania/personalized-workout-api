@@ -1,6 +1,8 @@
 # Personalized Workout API
 
-A Django REST Framework API for creating and managing personalized workout plans. Users can create workouts, track fitness goals, and manage their own workout plans. Built with Docker for easy setup and development.
+A Django REST Framework API for creating and managing personalized workout plans. 
+Users can create workouts, track fitness goals, and manage their own workout plans. 
+Built with Docker for easy setup and development.
 
 ---
 
@@ -57,15 +59,14 @@ TZ=UTC
 docker-compose up --build
 ```
 
-* The backend will run at `http://localhost:8000/`.
+* The backend will run at `http://0.0.0.0:8000/`.
 
 ---
 
-## 4. Run and apply migrations
+## 4. Apply migrations
 
 ```bash
-docker-compose exec backend python manage.py makemigrations
-docker-compose exec backend python manage.py migrate
+docker-compose exec backend uv run python manage.py migrate
 ```
 
 * Sets up the database tables.
@@ -75,7 +76,7 @@ docker-compose exec backend python manage.py migrate
 ## 5. Create a superuser (admin)
 
 ```bash
-docker-compose exec backend python manage.py createsuperuser
+docker-compose exec backend uv run python manage.py createsuperuser
 ```
 
 * Follow prompts to set username, email, and password.
@@ -83,15 +84,9 @@ docker-compose exec backend python manage.py createsuperuser
 
 ---
 
-## 6. Load initial exercises 
-
-```bash
-docker-compose exec backend python manage.py load_workouts
-```
-
 ---
 
-## 7. API Endpoints
+## 6. API Endpoints
 
 | Endpoint          | Method | Description                   |
 | ----------------- | ------ | ----------------------------- |
@@ -104,11 +99,11 @@ docker-compose exec backend python manage.py load_workouts
 | `/exercises/`     | GET    | List exercises                |
 | `/exercises/`     | POST   | Admin only: create exercises  |
 
-> Swagger/OpenAPI docs available at `/swagger/` if configured.
+> Swagger/OpenAPI docs available at `/swagger/`.
 
 ---
 
-## 8. Stop the containers
+## 7. Stop the containers
 
 ```bash
 docker-compose down
@@ -116,11 +111,19 @@ docker-compose down
 
 ---
 
-## 9. Tips
+## 8. Tips
 
 * To reset the database:
 
 ```bash
 docker-compose exec backend rm db.sqlite3
-docker-compose exec backend python manage.py migrate
+
+docker-compose exec backend uv run python manage.py makemigrations
+docker-compose exec backend uv run python manage.py migrate
+```
+
+* To load initial exercises
+
+```bash
+docker-compose exec backend uv run python manage.py load_workouts
 ```
