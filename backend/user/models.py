@@ -22,6 +22,11 @@ class UserManager(BaseUserManager):
 class User(PermissionsMixin, AbstractBaseUser):
     username = None
     email = models.EmailField(unique=True)
+    age = models.PositiveIntegerField(blank=True, default=0)
+    weight = models.PositiveIntegerField(blank=True, default=0) # kg
+    height = models.PositiveIntegerField(blank=True, default=0) # cm  
+    personal_records = models.JSONField(default=dict, blank=True)
+    personal_goals = models.JSONField(default=dict, blank=True)
 
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
