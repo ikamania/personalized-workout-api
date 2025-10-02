@@ -21,6 +21,11 @@ class Workout(models.Model):
 
 class WorkoutPlan(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="workout_plans")
-    name = models.CharField(max_length=100)
     workouts = models.ManyToManyField(Workout, related_name="plans")
+    name = models.CharField(max_length=100, unique=True)
+    goal = models.CharField(max_length=50)
+    frequency_per_week = models.PositiveIntegerField()
+    daily_duration_minutes = models.PositiveIntegerField()
+    description = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 

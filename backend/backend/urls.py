@@ -41,6 +41,7 @@ router = routers.DefaultRouter()
 router.register(r'users', user_views.UserViewSet)
 router.register(r'exercises', workout_views.ExerciseViewSet)
 router.register(r'workouts', workout_views.WorkoutViewSet)
+router.register(r'workoutplans', workout_views.WorkoutPlanViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
