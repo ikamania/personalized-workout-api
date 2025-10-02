@@ -89,8 +89,8 @@ docker-compose exec backend uv run python manage.py load_workouts
 docker-compose exec backend uv run python manage.py createsuperuser
 ```
 
-* Follow prompts to set username, email, and password.
-* Admin can manage exercises in the Django admin panel.
+* Follow prompts to set email, and password.
+* Admin can manage exercises.
 
 ---
 
