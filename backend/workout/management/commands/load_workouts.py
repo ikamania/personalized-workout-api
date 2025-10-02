@@ -2,19 +2,19 @@ import json
 import os
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from workout.models import Workout
+from workout.models import Exercise
 
 class Command(BaseCommand):
-    help = "Load workouts from JSON file into the database"
+    help = "Load exercises from JSON file into the database"
 
     def handle(self, *args, **kwargs):
-        file_path = os.path.join(settings.BASE_DIR, 'workout', 'data', 'workouts.json')
+        file_path = os.path.join(settings.BASE_DIR, 'workout', 'data', 'exercises.json')
         
         with open(file_path, 'r') as f:
             data = json.load(f)
 
         for item in data:
-            Workout.objects.get_or_create(
+            Exercise.objects.get_or_create(
                 name=item['name'],
                 defaults={
                     'description': item['description'],
@@ -24,5 +24,5 @@ class Command(BaseCommand):
                 }
             )
 
-        self.stdout.write(self.style.SUCCESS("Workouts loaded successfully!"))
+        self.stdout.write(self.style.SUCCESS("exercises loaded successfully!"))
 

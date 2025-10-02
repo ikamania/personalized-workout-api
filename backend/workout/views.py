@@ -35,5 +35,11 @@ class WorkoutViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Workout.objects.filter(user=self.request.user)
+        user = self.request.user
+        if not user.is_authenticated:
+            return Workout.objects.none()
 
+        return Workout.objects.filter(user=user)
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)

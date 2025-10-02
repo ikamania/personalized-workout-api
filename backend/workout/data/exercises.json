@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Push Ups",
+    "description": "A basic upper-body exercise that strengthens chest, shoulders, and triceps.",
+    "instructions": "1. Start in a plank position.\n2. Lower your body until your chest nearly touches the floor.\n3. Push back up.\n4. Repeat for 10-15 reps.",
+    "target_muscles": "Chest, Shoulders, Triceps",
+    "equipment": "None"
+  },
+  {
+    "name": "Squats",
+    "description": "A fundamental lower-body exercise to build strength in legs and glutes.",
+    "instructions": "1. Stand with feet shoulder-width apart.\n2. Lower your hips as if sitting in a chair.\n3. Keep chest up and knees over toes.\n4. Return to standing.\n5. Repeat for 12-15 reps.",
+    "target_muscles": "Quadriceps, Glutes, Hamstrings",
+    "equipment": "None"
+  },
+  {
+    "name": "Dumbbell Bicep Curl",
+    "description": "Isolate and strengthen the biceps using dumbbells.",
+    "instructions": "1. Stand with a dumbbell in each hand, palms facing forward.\n2. Curl the dumbbells up to shoulder height.\n3. Lower slowly back to start.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Biceps",
+    "equipment": "Dumbbells"
+  },
+  {
+    "name": "Lunges",
+    "description": "A lower-body exercise targeting legs and glutes, improving balance.",
+    "instructions": "1. Stand upright.\n2. Step forward with one leg and lower your hips until both knees are bent at 90 degrees.\n3. Push back to start.\n4. Repeat on the other leg.\n5. Perform 10-12 reps per leg.",
+    "target_muscles": "Quadriceps, Glutes, Hamstrings",
+    "equipment": "None"
+  },
+  {
+    "name": "Plank",
+    "description": "A core stabilization exercise to strengthen abs and lower back.",
+    "instructions": "1. Start in a forearm plank position.\n2. Keep your body straight from head to heels.\n3. Hold the position for 30-60 seconds.\n4. Repeat for 3 sets.",
+    "target_muscles": "Core, Lower Back, Shoulders",
+    "equipment": "None"
+  },
+  {
+    "name": "Bench Press",
+    "description": "A compound upper-body exercise targeting chest and triceps.",
+    "instructions": "1. Lie flat on a bench holding a barbell.\n2. Lower the barbell to your chest.\n3. Press it back up until arms are extended.\n4. Repeat for 8-12 reps.",
+    "target_muscles": "Chest, Triceps, Shoulders",
+    "equipment": "Barbell, Bench"
+  },
+  {
+    "name": "Deadlift",
+    "description": "A full-body strength exercise primarily targeting the posterior chain.",
+    "instructions": "1. Stand with feet hip-width apart, barbell in front.\n2. Hinge at hips and lift the barbell while keeping your back straight.\n3. Lower back to start.\n4. Repeat for 6-10 reps.",
+    "target_muscles": "Hamstrings, Glutes, Lower Back",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "Pull Ups",
+    "description": "An upper-body pulling exercise that strengthens back and biceps.",
+    "instructions": "1. Hang from a pull-up bar with palms facing away.\n2. Pull your body up until your chin passes the bar.\n3. Lower slowly.\n4. Repeat for 6-12 reps.",
+    "target_muscles": "Back, Biceps, Shoulders",
+    "equipment": "Pull-Up Bar"
+  },
+  {
+    "name": "Shoulder Press",
+    "description": "Strengthens shoulders and triceps using dumbbells or barbell.",
+    "instructions": "1. Hold dumbbells at shoulder height.\n2. Press overhead until arms are fully extended.\n3. Lower slowly.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Shoulders, Triceps",
+    "equipment": "Dumbbells or Barbell"
+  },
+  {
+    "name": "Bicycle Crunches",
+    "description": "An abdominal exercise targeting obliques and rectus abdominis.",
+    "instructions": "1. Lie on your back, hands behind head.\n2. Bring opposite elbow to opposite knee while extending the other leg.\n3. Alternate sides for 15-20 reps per side.",
+    "target_muscles": "Abs, Obliques",
+    "equipment": "None"
+  },
+  {
+    "name": "Leg Press",
+    "description": "A machine exercise targeting quadriceps and glutes.",
+    "instructions": "1. Sit on the leg press machine with feet on the platform.\n2. Push the platform away by extending your legs.\n3. Slowly return to start.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Quadriceps, Glutes",
+    "equipment": "Leg Press Machine"
+  },
+  {
+    "name": "Tricep Dips",
+    "description": "An upper-body exercise targeting triceps and chest.",
+    "instructions": "1. Place hands on a bench or parallel bars.\n2. Lower your body until elbows are at 90 degrees.\n3. Push back up.\n4. Repeat for 10-15 reps.",
+    "target_muscles": "Triceps, Chest, Shoulders",
+    "equipment": "Bench or Dip Bars"
+  },
+  {
+    "name": "Russian Twists",
+    "description": "A core exercise focusing on obliques and rotational strength.",
+    "instructions": "1. Sit on the floor with knees bent and lean back slightly.\n2. Twist torso to the left and right, touching the floor beside you.\n3. Perform 20-30 twists.",
+    "target_muscles": "Obliques, Core",
+    "equipment": "Optional: Medicine Ball"
+  },
+  {
+    "name": "Lat Pulldown",
+    "description": "Strengthens back and biceps using a cable machine.",
+    "instructions": "1. Sit at a lat pulldown machine, grab the bar with wide grip.\n2. Pull the bar down to your chest.\n3. Slowly return to start.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Back, Biceps",
+    "equipment": "Lat Pulldown Machine"
+  },
+  {
+    "name": "Mountain Climbers",
+    "description": "A full-body exercise that improves core stability and cardio.",
+    "instructions": "1. Start in a plank position.\n2. Drive knees alternately toward your chest quickly.\n3. Continue for 30-60 seconds.",
+    "target_muscles": "Core, Shoulders, Legs",
+    "equipment": "None"
+  },
+  {
+    "name": "Calf Raises",
+    "description": "Isolates and strengthens calf muscles.",
+    "instructions": "1. Stand upright with feet hip-width apart.\n2. Raise heels as high as possible.\n3. Lower slowly.\n4. Repeat for 15-20 reps.",
+    "target_muscles": "Calves",
+    "equipment": "Optional: Dumbbells"
+  },
+  {
+    "name": "Dumbbell Fly",
+    "description": "Chest isolation exercise to stretch and strengthen chest muscles.",
+    "instructions": "1. Lie on a bench holding dumbbells above chest.\n2. Lower arms out to sides in an arc.\n3. Bring dumbbells back together.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Chest, Shoulders",
+    "equipment": "Dumbbells, Bench"
+  },
+  {
+    "name": "Hamstring Curl",
+    "description": "Targets hamstrings using a machine.",
+    "instructions": "1. Lie face down on a hamstring curl machine.\n2. Curl your legs toward your glutes.\n3. Slowly lower back.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Hamstrings",
+    "equipment": "Hamstring Curl Machine"
+  },
+  {
+    "name": "Incline Dumbbell Press",
+    "description": "Targets upper chest and shoulders with dumbbells.",
+    "instructions": "1. Lie on an incline bench with dumbbells in hands.\n2. Press dumbbells overhead.\n3. Lower slowly.\n4. Repeat for 10-12 reps.",
+    "target_muscles": "Chest, Shoulders, Triceps",
+    "equipment": "Dumbbells, Incline Bench"
+  },
+  {
+    "name": "Side Plank",
+    "description": "A core exercise targeting obliques and stabilizing muscles.",
+    "instructions": "1. Lie on your side, supporting your body with one forearm.\n2. Lift hips to keep a straight line.\n3. Hold for 20-45 seconds.\n4. Repeat on other side.",
+    "target_muscles": "Obliques, Core, Shoulders",
+    "equipment": "None"
+  }
+]

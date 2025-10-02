@@ -10,6 +10,18 @@ class BaseExerciseSerializer(serializers.ModelSerializer):
 
 
 class BaseWorkoutSerializer(serializers.ModelSerializer):
+    exercise_id = serializers.PrimaryKeyRelatedField(
+        queryset=Exercise.objects.all(),
+        source="exercise",
+        write_only=True
+    )
+
     class Meta:
         model = Workout
         fields = ["exercise_id", "sets", "reps"]
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        rep["exercise"] = BaseExerciseSerializer(instance.exercise).data
+
+        return rep
