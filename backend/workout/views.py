@@ -1,32 +1,17 @@
 from rest_framework import viewsets, permissions
-from rest_framework.exceptions import PermissionDenied
 
 from workout.serializers import BaseExerciseSerializer, BaseWorkoutSerializer, BaseWorkoutPlanSerializer
 from .models import Exercise, Workout, WorkoutPlan
+from .permissions import IsAdmin
 
 
 class ExerciseViewSet(viewsets.ModelViewSet):
     queryset = Exercise.objects.all()
     serializer_class = BaseExerciseSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAdmin]
     
     def get_queryset(self):
         return Exercise.objects.all()
-
-    def perform_create(self, serializer):
-        if not self.request.user.is_staff:
-            raise PermissionDenied("Only admins can create workouts")
-        serializer.save()
-
-    def perform_update(self, serializer):
-        if not self.request.user.is_staff:
-            raise PermissionDenied("Only admins can update workouts")
-        serializer.save()
-
-    def perform_destroy(self, instance):
-        if not self.request.user.is_staff:
-            raise PermissionDenied("Only admins can delete workouts")
-        instance.delete()
 
 
 class WorkoutViewSet(viewsets.ModelViewSet):
