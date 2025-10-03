@@ -26,7 +26,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     weight = models.PositiveIntegerField(blank=True, default=0) # kg
     height = models.PositiveIntegerField(blank=True, default=0) # cm  
     personal_records = models.JSONField(default=dict, blank=True)
-    personal_goals = models.JSONField(default=dict, blank=True)
+    personal_goals = models.JSONField(default=list, blank=True)
 
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
